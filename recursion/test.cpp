@@ -14,6 +14,8 @@ void printVector(vector<int> vector) {
 int main()
 {
 
-    printVector(math5::findPrimeFactors(1764453212));
+    printVector(math5::findPrimeFactors(6));
+    printVector(math5::findPrimeFactors(12));
+    cout << math5::SGF(6, 12) << endl;
 
 }

@@ -36,7 +36,6 @@ namespace math5 {
     std::vector<int> findPrimeFactors(int x) {
         std::vector<int> factors;
         int current = x;
-        std::cout << current << std::endl;
         while (true)
         {
             if (isPrime(current)) {
@@ -45,7 +44,6 @@ namespace math5 {
             }
             for (int i = 2; i < sqrt(current) + 1; i += 2) {
                 if (current % i == 0) {
-                    std::cout << current << "  " << i << std::endl;
                     factors.push_back(i);
                     break;
                 }
@@ -53,14 +51,23 @@ namespace math5 {
             }
             current /= factors[factors.size() - 1];
         }
-
-        return factors;
-        
+        return factors;   
     }
 
     //finds the largest common factor.
     int SGF(int a, int b) {
-        return 0;
+        std::vector<int> aVectors = findPrimeFactors(a);
+        std::vector<int> bVectors = findPrimeFactors(b);
+        int factor = 1;
+        for (int i = 0; i < aVectors.size(); i++) {
+            for (int ii = 0; ii < bVectors.size(); ii++) {
+                if (aVectors[i] == bVectors[ii]) {
+                    factor *= aVectors[i];
+                    break;
+                }
+            }
+        }
+        return factor;
     }
 
 }

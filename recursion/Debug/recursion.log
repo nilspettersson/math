@@ -1,4 +1,10 @@
 ﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(467,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (recursion.vcxproj).  This can lead to incorrect clean and rebuild behavior.
   Math5.cpp
 C:\vs\c++\recursion\recursion\Math5.h(2,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\vs\c++\recursion\recursion\Math5.cpp(62,27): warning C4018: '<': signed/unsigned mismatch
+C:\vs\c++\recursion\recursion\Math5.cpp(63,33): warning C4018: '<': signed/unsigned mismatch
+  test.cpp
+C:\vs\c++\recursion\recursion\Math5.h(2,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\vs\c++\recursion\recursion\test.cpp(8,23): warning C4018: '<': signed/unsigned mismatch
+  Generating Code...
   recursion.vcxproj -> C:\vs\c++\recursion\Debug\Math.exe
