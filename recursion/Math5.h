@@ -1,4 +1,5 @@
 #pragma once
+#include <vector>;
 
 namespace math5 {
 
@@ -10,7 +11,7 @@ namespace math5 {
 
 	bool isPrime(int x);
 
-	int findPrimeFactors(int x);
+	std::vector<int> findPrimeFactors(int x);
 
 	int SGF(int a, int b);
 

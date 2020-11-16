@@ -1,4 +1,5 @@
 #include "Math5.h"
+#include <iostream>
 #include <vector>
 
 namespace math5 {
@@ -22,7 +23,7 @@ namespace math5 {
 
     bool isPrime(int x) {
         bool isPrime = true;
-        for (int i = 2; i < x; i++) {
+        for (int i = 2; i < x / 2 + 1; i++) {
             if (x % i == 0) {
                 isPrime = false;
                 return isPrime;
@@ -32,10 +33,28 @@ namespace math5 {
     }
 
     //finds all prime factors of a nummber
-    int findPrimeFactors(int x) {
-        std::vector<int> facctors;
+    std::vector<int> findPrimeFactors(int x) {
+        std::vector<int> factors;
+        int current = x;
+        std::cout << current << std::endl;
+        while (true)
+        {
+            if (isPrime(current)) {
+                factors.push_back(current);
+                break;
+            }
+            for (int i = 2; i < sqrt(current) + 1; i += 2) {
+                if (current % i == 0) {
+                    std::cout << current << "  " << i << std::endl;
+                    factors.push_back(i);
+                    break;
+                }
+                i -= 1;
+            }
+            current /= factors[factors.size() - 1];
+        }
 
-        return 0;
+        return factors;
         
     }
 

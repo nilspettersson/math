@@ -4,9 +4,16 @@
 using namespace std;
 
 
+void printVector(vector<int> vector) {
+    for (int i = 0; i < vector.size(); i++) {
+        cout << vector[i] << " ";
+    }
+    cout << endl;
+}
+
 int main()
 {
 
-    cout << math5::isPrime(6) << endl;
+    printVector(math5::findPrimeFactors(1764453212));
 
 }
