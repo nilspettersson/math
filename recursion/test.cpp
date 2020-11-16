@@ -7,6 +7,6 @@ using namespace std;
 int main()
 {
 
-    cout << math5::factorial(4) << endl;
+    cout << math5::isPrime(6) << endl;
 
 }
