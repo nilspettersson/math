@@ -15,6 +15,8 @@ namespace math5 {
 
 	int SGF(int a, int b);
 
+	int MGM(int a, int b);
+
 }
 
 

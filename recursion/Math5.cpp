@@ -70,4 +70,25 @@ namespace math5 {
         return factor;
     }
 
+    //finds the smallest common multiplier.
+    int MGM(int a, int b) {
+        std::vector<int> aVectors = findPrimeFactors(a);
+        std::vector<int> bVectors = findPrimeFactors(b);
+        int multiplier = 1;
+        for (int i = 0; i < aVectors.size(); i++) {
+            multiplier *= aVectors[i];
+            
+            for (int ii = 0; ii < bVectors.size(); ii++) {
+                if (aVectors[i] == bVectors[ii]) {
+                    bVectors.erase(bVectors.begin() + ii);
+                    break;
+                }
+            }
+        }
+        for (int i = 0; i < bVectors.size(); i++) {
+            multiplier *= bVectors[i];
+        }
+        return multiplier;
+    }
+
 }

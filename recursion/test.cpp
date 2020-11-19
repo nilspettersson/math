@@ -16,6 +16,6 @@ int main()
 
     printVector(math5::findPrimeFactors(6));
     printVector(math5::findPrimeFactors(12));
-    cout << math5::SGF(6, 12) << endl;
+    cout << math5::MGM(48, 180) << endl;
 
 }
